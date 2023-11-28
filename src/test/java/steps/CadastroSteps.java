@@ -46,6 +46,7 @@ public class CadastroSteps extends BaseSteps {
     public void clicaNoBotaoCadastrar() {
         paginaCadastro.clicarCadastrar();
     }
+
     @Entao("o sistema exibe a mensagem {string}")
     public void oSistemaExibeAMensagem(String msgEsperada) {
         Assert.assertEquals(msgEsperada, paginaCadastro.validarMensagem());

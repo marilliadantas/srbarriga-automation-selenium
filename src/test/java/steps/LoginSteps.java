@@ -19,12 +19,14 @@ public class LoginSteps extends BaseSteps {
         paginaLogin.validaPaginaLogin();
         screenshot();
     }
+
     @Quando("o usuario insere credenciais validas")
     public void oUsuarioInsereCredenciaisValidas() {
         paginaLogin.preencherEmail("kylianmb@teste.com");
         paginaLogin.preencherSenha("1234Teste");
         screenshot();
     }
+
     @E("clica em {string}")
     public void clicaEmEntrar(String string) {
         paginaLogin.clicarEntrar();
@@ -47,6 +49,7 @@ public class LoginSteps extends BaseSteps {
         paginaLogin.preencherSenha(senha);
         screenshot();
     }
+
     @Entao("o sistema exibe a {string}")
     public void oSistemaExibeA(String msgEsperada) {
         Assert.assertEquals(msgEsperada, paginaLogin.validaMensagemErro());
@@ -62,5 +65,4 @@ public class LoginSteps extends BaseSteps {
         Assert.assertEquals(erros,retorno);
         screenshot();
     }
-
 }
