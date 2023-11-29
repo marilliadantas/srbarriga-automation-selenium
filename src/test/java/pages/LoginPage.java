@@ -16,7 +16,7 @@ public class LoginPage extends BasePage {
     private By msgErro = By.cssSelector("div[class=\"alert alert-danger\"]");
 
     public void validaPaginaLogin() {
-        driver.get(url);
+       acessar(url);
     }
 
     public void preencherEmail(String email){
@@ -47,5 +47,12 @@ public class LoginPage extends BasePage {
             retorno.add(erro.getText());
         }
         return retorno;
+    }
+
+    public void fazerLogin(){
+        driver.get(url);
+        preencher(inputEmail, "kylianmb@teste.com");
+        preencher(inputSenha, "1234Teste");
+        clicar(btn_entrar);
     }
 }
