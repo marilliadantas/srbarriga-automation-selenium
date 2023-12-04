@@ -21,10 +21,21 @@ public class HomeSteps extends BaseSteps {
         paginaHome.clicarSair();
     }
 
+    @Quando("clicar em {string}")
+    public void clicarEm(String string) {
+        paginaHome.clicarContas();
+        screenshot();
+    }
+
     @Entao("o sistema redireciona para a pagina de login")
     public void oSistemaRedirecionaParaAPaginaDeLogin() {
         String urlEsperada = "https://seubarriga.wcaquino.me/logout";
         Assert.assertEquals(urlEsperada, browser.getCurrentUrl());
         screenshot();
+    }
+
+    @Quando("clicar em listar")
+    public void clicarEmListar() {
+        paginaHome.clicarListar();
     }
 }

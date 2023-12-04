@@ -9,6 +9,7 @@ public class HomePage extends BasePage {
     private By btn_sair = By.linkText("Sair");
     private By linkContas = By.linkText("Contas");
     private By btn_adicionar = By.linkText("Adicionar");
+    private By btn_listar = By.cssSelector("a[href=\"/contas\"]");
 
     public String validarMensagemWelcome() {
         waitElementVisible(msgWelcome, 5);
@@ -25,5 +26,9 @@ public class HomePage extends BasePage {
 
     public void clicarAdicionar(){
         clicarLink(btn_adicionar);
+    }
+
+    public void clicarListar(){
+        clicarLink(btn_listar);
     }
 }

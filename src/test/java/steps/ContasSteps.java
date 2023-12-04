@@ -39,8 +39,37 @@ public class ContasSteps extends BaseSteps {
 
     @E("exibe uma mensagem {string}")
     public void exibeUmaMensagem(String msgEsperada) {
-        Assert.assertEquals(msgEsperada, paginaContas.validaMsgContaCriada());
+        Assert.assertEquals(msgEsperada, paginaContas.validaMsg());
         screenshot();
     }
 
+    @Quando("clicar em editar")
+    public void clicarEmEditar() {
+        paginaContas.clicarEditar();
+        screenshot();
+    }
+
+    @Quando("editar o nome da conta")
+    public void editarONomeDaConta() {
+        paginaContas.editarNome();
+        screenshot();
+    }
+
+    @Entao("o sistema exibe o nome da conta editado")
+    public void oSistemaExibeONomeDaContaEditado() {
+        Assert.assertEquals(paginaContas.validaNomeContaEditada(), "C6 Bank (conta editada)");
+        screenshot();
+    }
+
+    @Entao("o sistema exibe uma conta {string}")
+    public void oSistemaExibeUmaConta(String string) {
+        Assert.assertEquals(paginaContas.validaPrimeiraDaLista(), "Nubank");
+        screenshot();
+    }
+
+    @Quando("clicar em remover conta")
+    public void clicarEmRemoverConta() {
+        paginaContas.clicarRemover();
+        screenshot();
+    }
 }

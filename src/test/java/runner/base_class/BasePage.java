@@ -29,7 +29,6 @@ public class BasePage {
         driver.findElement(locator).clear();
         driver.findElement(locator).sendKeys(texto);
     }
-
     public void clicar(By locator){
         driver.findElement(locator).click();
     }
