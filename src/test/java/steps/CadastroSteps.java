@@ -57,7 +57,7 @@ public class CadastroSteps extends BaseSteps {
 
     @Quando("pressiona ENTER no teclado")
     public void pressionaENTERNoTeclado() {
-        paginaCadastro.pressionarEnter();
+        paginaCadastro.pressEnter();
     }
 
     // Fluxos de exceção
