@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-
 public class CadastroSteps extends BaseSteps {
      Faker faker = new Faker(Locale.forLanguageTag("pt-BR"));
      String nome = faker.name().fullName();

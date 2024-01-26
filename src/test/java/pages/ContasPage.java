@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import runner.base_class.BasePage;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class ContasPage extends BasePage {
 

@@ -15,7 +15,6 @@ public class CadastroPage extends BasePage {
     private By btnCadastrar = By.cssSelector("input[value='Cadastrar']");
     private By txtNotificacao = By.cssSelector("div[role=\"alert\"]");
 
-
     public void preencherCamposCadastro(String nome, String email, String senha){
         preencher(inputNome, nome);
         preencher(inputEmail, email);
