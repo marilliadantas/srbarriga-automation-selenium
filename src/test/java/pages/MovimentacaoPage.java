@@ -1,7 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import runner.base_class.BasePage;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MovimentacaoPage extends BasePage {
 
@@ -16,7 +20,8 @@ public class MovimentacaoPage extends BasePage {
     private By radioPago = By.cssSelector("#status_pago");
     private By radioPendente = By.cssSelector("#status_pendente");
     private By btnSalvar = By.cssSelector("button[class=\"btn btn-primary\"]");
-    private By msgMovimentacaoCriada = By.cssSelector("div[role=\"alert\"]");
+    private By msgAlert = By.cssSelector("div[role=\"alert\"]");
+    private By comboAlert = By.cssSelector("div[class=\"alert alert-danger\"]");
 
     public void inserirDataMovimentacao(){
         preencher(inputDataMovimentacao, "10/01/2023");
@@ -38,6 +43,10 @@ public class MovimentacaoPage extends BasePage {
         preencher(inputValor, "1300");
     }
 
+    public void inserirValorInvalido(){
+        preencher(inputValor, "jfhaskj#@#!@");
+    }
+
     public void clicarPago(){
         clicarRadio(radioPago);
     }
@@ -51,8 +60,8 @@ public class MovimentacaoPage extends BasePage {
     }
 
     public String validaMsg(){
-        waitElementVisible(msgMovimentacaoCriada, 5);
-        return obterValorPorTexto(msgMovimentacaoCriada);
+        waitElementVisible(msgAlert, 5);
+        return obterValorPorTexto(msgAlert);
     }
 
     public void clicarTipoMovimentacao(){
@@ -61,5 +70,14 @@ public class MovimentacaoPage extends BasePage {
 
     public void clicarDespesa(){
         clicar(optionDespesa);
+    }
+
+    public List<String> ListaMsgErro() {
+        List<WebElement> erros = driver.findElements(comboAlert);
+        List<String> retorno = new ArrayList<String>();
+        for (WebElement erro : erros) {
+            retorno.add(erro.getText());
+        }
+        return retorno;
     }
 }
