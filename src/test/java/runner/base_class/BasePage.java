@@ -72,4 +72,12 @@ public class BasePage {
     public boolean verificarBotaoClicado(By locator){
         return driver.findElement(locator).isSelected();
     }
+
+    public void clicarBotaoPorTexto(String texto){
+        clicar(By.xpath("//button[.='"+texto+"']"));
+    }
+
+    public void limparCampo(By locator) {
+        driver.findElement(locator).clear();
+    }
 }

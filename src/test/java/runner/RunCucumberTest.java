@@ -24,7 +24,7 @@ import java.util.List;
                 "html:target/cucumber/index.html",
                 "json:target/cucumber/index.json"
         }
-        ,tags = "@criar-movimentacao-receita-pago"
+        ,tags = "@movimentacao"
 
         /**
          * Executar testes no termial

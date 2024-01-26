@@ -1,6 +1,8 @@
 package steps;
 
 import io.cucumber.java.pt.*;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import pages.HomePage;
 import pages.MovimentacaoPage;
 import runner.base_class.BaseSteps;
@@ -12,6 +14,18 @@ public class MovimentacaoSteps extends BaseSteps {
     @Quando("o usuario clicar em Criar movimentacao")
     public void o_usuario_clicar_em_criar_movimentacao() {
         paginaHome.clicarCriarMovimentacao();
+        screenshot();
+    }
+
+    @Quando("o usuario clicar em tipo de movimentacao")
+    public void o_usuario_clicar_em_tipo_de_movimentacao() {
+        paginaMovimentacao.clicarTipoMovimentacao();
+        screenshot();
+    }
+
+    @Quando("o usuario clicar em {string}")
+    public void o_usuario_clicar_em(String string) {
+        paginaMovimentacao.clicarDespesa();
         screenshot();
     }
 
@@ -47,8 +61,7 @@ public class MovimentacaoSteps extends BaseSteps {
 
     @E("o usuario seleciona uma conta")
     public void oUsuarioSelecionaUmaConta() {
-        paginaMovimentacao.selecionarConta();
-        screenshot();
+
     }
 
     @E("o usuario seleciona pago")
@@ -57,14 +70,40 @@ public class MovimentacaoSteps extends BaseSteps {
         screenshot();
     }
 
-    @E("o usuário clica em salvar")
-    public void oUsuárioClicaEmSalvar() {
-        paginaMovimentacao.clicarBotaoSalvar();
+    @Quando("o usuario seleciona pendente")
+    public void oUsuarioSelecionaPendente() {
+        paginaMovimentacao.clicarPendente();
         screenshot();
     }
 
-    @Entao("o sistema deve exibira mensagem {string}")
-    public void oSistemaDeveExibiraMensagem(String string) {
+    @E("o usuário clica em salvar")
+    public void oUsuárioClicaEmSalvar() {
+        paginaMovimentacao.clicarBotaoSalvar();
+    }
 
+    @Entao("o sistema deve exibir a mensagem {string}")
+    public void oSistemaDeveExibiraMensagem(String msgEsperada) {
+        Assert.assertEquals(msgEsperada, paginaMovimentacao.validaMsg());
+        screenshot();
+    }
+
+    @Quando("o usuario não inserir data de movimentacao")
+    public void oUsuarioNãoInserirDataDeMovimentacao() {
+        screenshot();
+    }
+
+    @Quando("o usuario nao insere a data de pagamento")
+    public void oUsuarioNaoInsereADataDePagamento() {
+        screenshot();
+    }
+
+    @Quando("o usuario nao insere uma descricao")
+    public void oUsuarioNaoInsereUmaDescricao() {
+        screenshot();
+    }
+
+    @Quando("o usuario nao insere um interessado")
+    public void oUsuarioNaoInsereUmInteressado() {
+        screenshot();
     }
 }
