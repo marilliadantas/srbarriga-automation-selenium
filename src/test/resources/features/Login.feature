@@ -25,8 +25,8 @@ Funcionalidade: Login
 
     Exemplos:
     | Fluxo                     | Email                      | Senha           | Mensagem                           |
-    | email inválido            | "email@invalido.com"       | "1234Teste"     | "Problemas com o login do usuário" |
-    | senha inválida            | "kylianmb@teste.com"       | "senha_invalida"| "Problemas com o login do usuário" |
+    | email invalido            | "email@invalido.com"       | "1234Teste"     | "Problemas com o login do usuário" |
+    | senha invalida            | "kylianmb@teste.com"       | "senha_invalida"| "Problemas com o login do usuário" |
     | email em branco           | ""                         | "1234Teste"     | "Email é um campo obrigatório"     |
     | senha em branco           | "kylianmb@teste.com"       | ""              | "Senha é um campo obrigatório"     |
     | todos os campos em branco | ""                         | ""              | "Email é um campo obrigatório", "Senha é um campo obrigatório" |

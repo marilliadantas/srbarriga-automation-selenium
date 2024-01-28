@@ -1,10 +1,10 @@
 #language: pt
 
 @movimentacao
-Funcionalidade: Movimentação
+Funcionalidade: Movimentacao
 
   @criar-movimentacao-receita-pago
-  Cenario: 01 - Criar movimentação receita com pagamento pago
+  Cenario: 01 - Criar movimentacao receita com pagamento pago
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -18,7 +18,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Movimentação adicionada com sucesso!"
 
   @criar-movimentacao-receita-pendente
-  Cenario: 02 - Criar movimentação receita com pagamento pendente
+  Cenario: 02 - Criar movimentacao receita com pagamento pendente
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -32,7 +32,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Movimentação adicionada com sucesso!"
 
   @criar-movimentacao-despesa-pago
-  Cenario: 03 - Criar movimentação despesa com pagamento pago
+  Cenario: 03 - Criar movimentacao despesa com pagamento pago
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario clicar em tipo de movimentacao
@@ -48,7 +48,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Movimentação adicionada com sucesso!"
 
   @criar-movimentacao-despesa-pendente
-  Cenario: 04 - Criar movimentação despesa com pagamento pendente
+  Cenario: 04 - Criar movimentacao despesa com pagamento pendente
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario clicar em tipo de movimentacao
@@ -64,7 +64,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Movimentação adicionada com sucesso!"
 
   @criar-movimentacao-data-movimentacao-em-branco
-  Cenario: 05 - Criar movimentação com data de movimentação em branco
+  Cenario: 05 - Criar movimentacao com data de movimentacao em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario nao inserir data de movimentacao
@@ -78,7 +78,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Data da Movimentação é obrigatório"
 
   @criar-movimentacao-data-pagamento-em-branco
-  Cenario: 06 - Criar movimentação com data de pagamento em branco
+  Cenario: 06 - Criar movimentacao com data de pagamento em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -92,7 +92,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Data do pagamento é obrigatório"
 
   @criar-movimentacao-descricao-em-branco
-  Cenario: 07 - Criar movimentação com descricao em branco
+  Cenario: 07 - Criar movimentacao com descricao em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -106,7 +106,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Descrição é obrigatório"
 
   @criar-movimentacao-interessado-em-branco
-  Cenario: 08 - Criar movimentação com interessado em branco
+  Cenario: 08 - Criar movimentacao com interessado em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -120,7 +120,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Interessado é obrigatório"
 
   @criar-movimentacao-valor-em-branco
-  Cenario: 09 - Criar movimentação com valor em branco
+  Cenario: 09 - Criar movimentacao com valor em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao
@@ -134,7 +134,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir a mensagem "Valor é obrigatório", "Valor deve ser um número"
 
   @criar-movimentacao-campos-em-branco
-  Cenario: 10 - Criar movimentação com todos os campos em branco
+  Cenario: 10 - Criar movimentacao com todos os campos em branco
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario nao inserir data de movimentacao
@@ -148,7 +148,7 @@ Funcionalidade: Movimentação
     Entao o sistema deve exibir as mensagens "Data da Movimentação é obrigatório", "Data do pagamento é obrigatório", "Descrição é obrigatório", "Interessado é obrigatório", "Valor é obrigatório", "Valor deve ser um número"
 
   @criar-movimentacao-com-valor-invalido
-  Cenario: 11 - Criar movimentação com valor inválido
+  Cenario: 11 - Criar movimentacao com valor invalido
     Dado que o usuario esta na tela home
     Quando o usuario clicar em Criar movimentacao
     E o usuario insere a data da movimentacao

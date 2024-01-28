@@ -67,6 +67,7 @@ public class ContasSteps extends BaseSteps {
         screenshot();
     }
 
+
     @Quando("clicar em remover conta")
     public void clicarEmRemoverConta() {
         paginaContas.clicarRemover();

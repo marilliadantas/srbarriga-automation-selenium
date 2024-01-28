@@ -21,7 +21,7 @@ Funcionalidade: Contas
       Entao o sistema exibe uma conta "Inter"
 
   @editar-conta
-  Cenario: 03 - Editar conta - Primeira da Lista
+  Cenario: 03 - Editar conta - Segunda da Lista
       Dado que o usuario esta na tela home
       Quando clicar em contas
       E clicar em listar
@@ -32,7 +32,7 @@ Funcionalidade: Contas
       E exibe uma mensagem "Conta alterada com sucesso!"
 
   @remover-conta
-  Cenario: 04 - Remover conta - Primeira da Lista
+  Cenario: 04 - Remover conta - Segunda da Lista
       Dado que o usuario esta na tela home
       Quando clicar em contas
       E clicar em listar
