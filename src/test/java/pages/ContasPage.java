@@ -18,7 +18,7 @@ public class ContasPage extends BasePage {
 //    String nomeConta = "Nubank " + aleatorio;
 
     public void nomeConta() {
-        preencher(inputNome, "Inter");
+        preencher(inputNome, "Nubank");
     }
 
     public void clicarSalvar(){
