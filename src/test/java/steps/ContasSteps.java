@@ -63,7 +63,7 @@ public class ContasSteps extends BaseSteps {
 
     @Entao("o sistema exibe uma conta {string}")
     public void oSistemaExibeUmaConta(String string) {
-        Assert.assertEquals(paginaContas.validaPrimeiraDaLista(), "Inter");
+        Assert.assertEquals(paginaContas.validaPrimeiraDaLista(), "Nubank");
         screenshot();
     }
 
