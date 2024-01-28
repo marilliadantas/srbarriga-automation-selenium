@@ -18,7 +18,7 @@ Funcionalidade: Contas
       Dado que o usuario esta na tela home
       Quando clicar em contas
       E clicar em listar
-      Entao o sistema exibe uma conta "Nubank"
+      Entao o sistema exibe uma conta "Inter"
 
   @editar-conta
   Cenario: 03 - Editar conta - Primeira da Lista

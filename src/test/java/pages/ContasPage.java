@@ -8,10 +8,10 @@ public class ContasPage extends BasePage {
     private By inputNome = By.id("nome");
     private By btnSalvar = By.cssSelector("button[class=\"btn btn-primary\"]");
     private By alertSuccess = By.cssSelector("div[class=\"alert alert-success\"]");
-    private By btn_editar = By.cssSelector("#tabelaContas > tbody > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1) > span");
-    private By nomeEditado = By.cssSelector("#tabelaContas > tbody > tr:nth-child(1) > td:nth-child(1)");
-    private By contaPrimeiraDaLista = By.cssSelector("#tabelaContas > tbody > tr:nth-child(1) > td:nth-child(1)");
-    private By btn_remover = By.cssSelector("#tabelaContas > tbody > tr:nth-child(1) > td:nth-child(2) > a:nth-child(2)");
+    private By btn_editar = By.cssSelector("#tabelaContas > tbody > tr:nth-child(2) > td:nth-child(2) > a:nth-child(1)");
+    private By nomeEditado = By.cssSelector("#tabelaContas > tbody > tr:nth-child(2) > td:nth-child(1)");
+    private By contaSegundaDaLista = By.cssSelector("#tabelaContas > tbody > tr:nth-child(2) > td:nth-child(1)");
+    private By btn_remover = By.cssSelector("#tabelaContas > tbody > tr:nth-child(2) > td:nth-child(2) > a:nth-child(2)");
 
 //    int aleatorio = ThreadLocalRandom.current().nextInt(1, 1001);
 //
@@ -47,6 +47,6 @@ public class ContasPage extends BasePage {
     }
 
     public String validaPrimeiraDaLista(){
-        return obterValorPorTexto(contaPrimeiraDaLista);
+        return obterValorPorTexto(contaSegundaDaLista);
     }
 }
