@@ -47,9 +47,11 @@ public class RunCucumberTest {
         cucumberJsonReports.add(new File("target/cucumber/index.json"));
         reportBuilder.setReportDirectory("target/cucumber/report-builder/");
         reportBuilder.setReportFileName("index");
-        reportBuilder.setReportColor(Color.PURPLE); // http://materializecss.com/color.html
-        reportBuilder.setReportTitle("Teste Sr Barriga");
+        reportBuilder.setReportColor(Color.GREY); // http://materializecss.com/color.html
+        reportBuilder.setReportTitle("Teste funcional - Site Sr. Barriga");
         reportBuilder.setAdditionalInfo("Date", dataReport);
+        reportBuilder.setAdditionalInfo("Browser", "Google Chrome");
+        reportBuilder.setAdditionalInfo("Environment", "Windows 11");
         reportBuilder.build(cucumberJsonReports);
     }
 }
