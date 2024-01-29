@@ -48,7 +48,7 @@ public class RunCucumberTest {
         reportBuilder.setReportDirectory("target/cucumber/report-builder/");
         reportBuilder.setReportFileName("index");
         reportBuilder.setReportColor(Color.GREY); // http://materializecss.com/color.html
-        reportBuilder.setReportTitle("Teste funcional - Site Sr. Barriga");
+        reportBuilder.setReportTitle("Teste funcional - Sr. Barriga");
         reportBuilder.setAdditionalInfo("Date", dataReport);
         reportBuilder.setAdditionalInfo("Browser", "Google Chrome");
         reportBuilder.setAdditionalInfo("Environment", "Windows 11");
